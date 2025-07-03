@@ -1,8 +1,7 @@
-/* components/layout/Header.module.scss */
-@use "../../styles/colors";
+@use "../../styles/colors" as *;
 
 .header {
-  background-color: #ffffff;
+  background-color: $color-text-light;
   border-bottom: 1px solid #eaeaea;
   padding: 1rem 0;
   position: sticky;
@@ -25,12 +24,6 @@
   gap: 0.75rem;
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1a202c;
-}
-
 .nav {
   display: flex;
   gap: 1.5rem;
@@ -41,8 +34,9 @@
   color: #4a5568;
   font-weight: 500;
   transition: color 0.2s ease;
-}
+  font-size: 18px;
 
-.nav a:hover {
-  color: #1a202c;
+  &:hover {
+    color: $color-text-dark;
+  }
 }

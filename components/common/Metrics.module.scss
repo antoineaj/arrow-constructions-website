@@ -1,6 +1,8 @@
+@use "../../styles/colors" as *;
+
 .metricsSection {
   padding: 4rem 1rem;
-  background-color: cyan;
+  background: linear-gradient(135deg, $color-primary-start, $color-primary-end);
   text-align: center;
   color: white;
 }

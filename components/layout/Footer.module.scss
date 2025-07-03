@@ -1,8 +1,9 @@
 // components/Footer/Footer.module.scss
+@use "../../styles/colors" as *;
 
 .footer {
-  background-color: #1a222f; /* Dark background color from the image */
-  color: #d0d2d6; /* Light text color for contrast */
+  background: linear-gradient(135deg, $color-secondary-start, $color-secondary-end);
+  color: $color-text-light; /* White text for better contrast */
   padding: 40px 20px 20px; /* Top, horizontal, bottom padding */
   font-family: Arial, sans-serif; /* Example font */
 }
@@ -33,7 +34,7 @@
 .columnTitle {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #ffffff; /* Slightly brighter for titles */
+  color: $color-text-light; /* Bright white for titles */
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -51,12 +52,12 @@
 }
 
 .socialLink {
-  color: #d0d2d6;
+  color: rgba($color-text-light, 0.9);
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: #007bff; /* Example hover color for icons */
+    color: $color-primary-start; /* Orange hover color for contrast */
   }
 }
 
@@ -75,13 +76,13 @@
   }
 
   a {
-    color: #d0d2d6;
+    color: rgba($color-text-light, 0.9);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s ease-in-out;
 
     &:hover {
-      color: #007bff; /* Example hover color for links */
+      color: $color-primary-start; /* Orange hover color for links */
     }
   }
 }
@@ -95,7 +96,7 @@
 }
 
 .contactIcon {
-  color: #007bff;
+  color: $color-primary-start; /* Orange icons for visual interest */
   font-size: 1rem;
   flex-shrink: 0; // Prevent icon from shrinking
 }
@@ -105,7 +106,7 @@
   margin: 20px auto 0;
   text-align: center;
   font-size: 0.8rem;
-  color: #a0a2a6; /* Slightly lighter for copyright text */
+  color: rgba($color-text-light, 0.7); /* Slightly transparent white for copyright */
   padding-top: 20px; /* Space below the line */
 }
 

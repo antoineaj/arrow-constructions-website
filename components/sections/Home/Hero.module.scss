@@ -1,8 +1,9 @@
 /* components/home/Hero.module.scss */
+@use "../../../styles/colors" as *;
 
 .hero {
   padding: 4rem 1rem;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, $color-primary-start, $color-primary-end);
 }
 
 .content {
@@ -22,13 +23,13 @@
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1a202c;
+    color: $color-text-light;
     margin-bottom: 1rem;
   }
 
   p {
     font-size: 1.125rem;
-    color: #4a5568;
+    color: rgba($color-text-light, 0.9); // White text with slight transparency
     margin-bottom: 2rem;
     line-height: 1.6;
   }
@@ -46,25 +47,47 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .primaryBtn {
-  background: linear-gradient(to right, #f78c4e, #e85d45);
-  color: #ffffff;
+  background: $color-text-light;
+  color: $color-primary-end;
+  box-shadow: 0 4px 15px rgba($color-text-light, 0.3);
+  border: 2px solid $color-text-light;
 
   &:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($color-text-light, 0.4);
+    background: rgba($color-text-light, 0.9);
   }
 }
 
 .secondaryBtn {
   background-color: transparent;
-  border: 2px solid #e85d45;
-  color: #e85d45;
+  border: 2px solid $color-text-light;
+  color: $color-text-light;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $color-text-light;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
 
   &:hover {
-    background-color: #e85d45;
-    color: #ffffff;
+    color: $color-primary-end;
+
+    &::before {
+      left: 0;
+    }
   }
 }
 
@@ -72,4 +95,28 @@
   flex: 1;
   min-width: 300px;
   text-align: center;
+  position: relative;
+
+  // Add a subtle background accent
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(
+      135deg,
+      rgba($color-accent-start, 0.1),
+      rgba($color-info-start, 0.1)
+    );
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+.heroImage {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }

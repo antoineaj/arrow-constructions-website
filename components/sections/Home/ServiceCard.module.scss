@@ -7,7 +7,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  width: 300px; /* Adjust as needed */
   background-color: #fff;
   transition: transform 0.2s ease-in-out;
   text-align: start;
@@ -26,7 +25,6 @@
   position: absolute;
   bottom: 8px;
   left: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 6px;
   border-radius: 4px;
@@ -36,8 +34,8 @@
   z-index: 2;
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -47,14 +45,15 @@
 
 .content {
   padding: 16px;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1; /* Allows content to take up remaining space */
 }
 
 .title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 8px;
   color: #333;
 }
@@ -62,8 +61,23 @@
 .description {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 0; /* No bottom margin needed if it's the last element */
-  line-height: 2;
-  flex-grow: 1; /* Allows description to take up available vertical space */
+  margin-bottom: 12px; /* Add some space before bullet points */
+  line-height: 1.2rem;
   white-space: pre-line; /* Preserves newlines and line breaks */
+}
+
+.bulletPoints {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.4; /* Tighter line height for bullet points */
+
+  li {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

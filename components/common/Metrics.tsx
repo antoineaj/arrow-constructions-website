@@ -14,7 +14,7 @@ export default function Metrics() {
   return (
     <section className={styles.metricsSection}>
       <div className={styles.heading}>
-        <h2>Why Choose MEP Solutions</h2>
+        <h2>Why Choose ARROW CONSTRUCTIONS</h2>
       </div>
       <div className={styles.metricsGrid}>
         {metrics.map((metric, index) => {

@@ -10,10 +10,10 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>Reliable MEP Solutions for Every Project</h1>
+          <h1>Professional MEP Solutions for Modern Buildings</h1>
           <p>
-            From planning to execution, we deliver high-quality Mechanical,
-            Electrical, and Plumbing services tailored to your needs.
+            Expert mechanical, electrical, and plumbing services delivering
+            innovative solutions for commercial and residential projects.
           </p>
           <div className={styles.buttons}>
             <Link href="/contact" className={styles.primaryBtn}>
@@ -31,6 +31,7 @@ export default function Hero() {
             width={500}
             height={400}
             priority
+            className={styles.heroImage}
           />
         </div>
       </div>

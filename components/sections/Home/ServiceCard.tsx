@@ -8,7 +8,9 @@ interface ServiceCardProps {
   imageAlt: string;
   title: string;
   description: string;
+  bulletPoints?: string[]; // Optional bullet points array
   icon?: IconType; // Optional icon prop
+  iconColor?: string; // Optional icon background color
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -16,7 +18,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageAlt,
   title,
   description,
+  bulletPoints,
   icon: Icon, // Rename to Icon for component usage
+  iconColor = "rgba(0, 0, 0, 0.7)", // Default background color
 }) => {
   return (
     <div className={styles.card}>
@@ -30,14 +34,24 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           priority // Consider adding priority if this card is above the fold
         />
         {Icon && (
-          <div className={styles.iconOverlay}>
+          <div
+            className={styles.iconOverlay}
+            style={{ backgroundColor: iconColor }}
+          >
             <Icon />
           </div>
         )}
       </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
+        <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
+        {bulletPoints && (
+          <ul className={styles.bulletPoints}>
+            {bulletPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
