@@ -10,6 +10,12 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.10",
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
   }
 }
