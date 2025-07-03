@@ -10,7 +10,11 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
+    "react-countup": "^6.5.3",
     "react-dom": "latest",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-visibility-sensor": "^5.1.1",
     "sass": "^1.89.2"
   },
   "devDependencies": {

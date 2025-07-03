@@ -1,0 +1,38 @@
+.metricsSection {
+  padding: 4rem 1rem;
+  background-color: cyan;
+  text-align: center;
+  color: white;
+}
+
+.heading {
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.metricsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .value {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+}

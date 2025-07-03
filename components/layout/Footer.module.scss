@@ -1,0 +1,131 @@
+// components/Footer/Footer.module.scss
+
+.footer {
+  background-color: #1a222f; /* Dark background color from the image */
+  color: #d0d2d6; /* Light text color for contrast */
+  padding: 40px 20px 20px; /* Top, horizontal, bottom padding */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+.container {
+  max-width: 1200px; /* Max width to center content */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  justify-content: space-between;
+  gap: 30px; /* Space between columns */
+  padding-bottom: 30px; /* Space above the copyright line */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+.column {
+  flex: 1; /* Allow columns to grow and shrink */
+  min-width: 200px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    flex: 1.5; /* Give the first column (MEP Solutions) a bit more space */
+    min-width: 250px;
+  }
+}
+
+.columnTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff; /* Slightly brighter for titles */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.socialLink {
+  color: #d0d2d6;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #007bff; /* Example hover color for icons */
+  }
+}
+
+.linksList,
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #d0d2d6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: #007bff; /* Example hover color for links */
+    }
+  }
+}
+
+.contactList {
+  li {
+    display: flex;
+    align-items: center; // Align icon/text vertically
+    gap: 10px; // Space between icon and text
+  }
+}
+
+.contactIcon {
+  color: #007bff;
+  font-size: 1rem;
+  flex-shrink: 0; // Prevent icon from shrinking
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a0a2a6; /* Slightly lighter for copyright text */
+  padding-top: 20px; /* Space below the line */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start; /* Align columns to the left on smaller screens */
+  }
+
+  .column {
+    width: 100%; /* Full width for columns */
+    min-width: unset;
+    &:first-child {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+  .columnTitle {
+    margin-top: 20px; /* Add some space between titles when stacked */
+  }
+}
