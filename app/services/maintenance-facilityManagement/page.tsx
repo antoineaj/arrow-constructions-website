@@ -10,6 +10,7 @@ import ServiceOverview from "../../../components/sections/Services/ServiceOvervi
 import ServiceDisplay from "../../../components/sections/Services/ServiceDisplay";
 import CallToActionSection from "../../../components/sections/Services/CallToActionSection";
 import ServiceHero from "../../../components/sections/Services/ServiceHero";
+import Breadcrumb from "../../../components/common/Breadcrumb";
 
 export default function MaintenanceFacilityManagementService() {
   const serviceBenefits = [
@@ -74,6 +75,7 @@ export default function MaintenanceFacilityManagementService() {
 
   return (
     <>
+      <Breadcrumb serviceName="Maintenance & Facility Management" />
       <ServiceHero
         title="Maintenance & Facility Management"
         description="Proactive maintenance strategies and reliable service support to keep your MEP systems running at peak performance — minimizing downtime and maximizing longevity."

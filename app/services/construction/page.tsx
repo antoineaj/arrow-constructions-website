@@ -9,6 +9,7 @@ import ServiceOverview from "../../../components/sections/Services/ServiceOvervi
 import ServiceDisplay from "../../../components/sections/Services/ServiceDisplay";
 import CallToActionSection from "../../../components/sections/Services/CallToActionSection";
 import ServiceHero from "../../../components/sections/Services/ServiceHero";
+import Breadcrumb from "../../../components/common/Breadcrumb";
 
 export default function ConstructionService() {
   const serviceBenefits = [
@@ -75,6 +76,7 @@ export default function ConstructionService() {
 
   return (
     <>
+      <Breadcrumb serviceName="Construction" />
       <ServiceHero
         title="Construction"
         description="From bid evaluation to on-site execution, we manage every phase of construction with precision, accountability, and technical excellence."

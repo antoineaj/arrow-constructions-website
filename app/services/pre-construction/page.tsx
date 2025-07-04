@@ -11,6 +11,7 @@ import {
 import ServiceOverview from "../../../components/sections/Services/ServiceOverview";
 import ServiceDisplay from "../../../components/sections/Services/ServiceDisplay";
 import CallToActionSection from "../../../components/sections/Services/CallToActionSection";
+import Breadcrumb from "../../../components/common/Breadcrumb";
 
 export default function PreConstructionService() {
   const serviceBenefits = [
@@ -77,6 +78,7 @@ export default function PreConstructionService() {
 
   return (
     <>
+      <Breadcrumb serviceName="Pre-construction" />
       <ServiceHero
         title="Pre-Construction"
         description="Plan with precision. Our Pre-Construction services lay the foundation for successful MEP projects by integrating technical expertise with strategic planning and cost control."

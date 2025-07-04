@@ -1,0 +1,42 @@
+@use "../../styles/colors" as *;
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.75rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.link {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-primary-start;
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #adb5bd;
+  font-size: 16px;
+}
+
+.current {
+  color: $color-primary-start;
+  font-weight: 500;
+}
