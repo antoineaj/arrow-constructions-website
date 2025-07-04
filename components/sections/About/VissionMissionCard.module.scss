@@ -1,0 +1,55 @@
+// components/VisionMissionCard/VisionMissionCard.module.scss
+
+.vmCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center content horizontally
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  flex: 1; /* Allows it to grow in the grid/flex container */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.iconWrapper {
+  background-color: #ffffff; /* White background within the circle */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-width: 2px; /* Border thickness */
+  border-style: solid; /* Make sure the border is visible */
+  padding: 5px; /* Padding inside the border, if icon is smaller */
+}
+
+.cardIcon {
+  font-size: 2.5rem; /* Size of the icon itself */
+  // Color will be inherited from the parent or set by specific icon if needed
+  // For these specific icons, we can set the color here to match the border
+  // or let the parent component define it based on the icon used.
+  // Given the image, the icon itself seems to inherit the border color.
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1; /* Allows description to take up available space */
+}

@@ -1,0 +1,54 @@
+// components/WhoWeAreSection/WhoWeAreSection.module.scss
+
+.whoWeAreSection {
+  padding: 80px 20px; /* Generous padding */
+  text-align: center; /* Center all text content */
+  background-color: #ffffff; /* Explicit white background for clear division */
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 40px 15px;
+  }
+}
+
+.container {
+  max-width: 900px; /* Max width for the text block */
+  margin: 0 auto; /* Center the container */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px; /* Space below the title */
+  line-height: 1.2;
+
+  @media (max-width: 992px) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8; /* Increased line-height for readability */
+  margin-bottom: 25px; /* Space between paragraphs */
+
+  &:last-child {
+    margin-bottom: 0; /* No margin below the last paragraph */
+  }
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+}

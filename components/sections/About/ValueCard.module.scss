@@ -1,0 +1,44 @@
+// components/ValueCard/ValueCard.module.scss
+
+.valueCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  // Box shadow is minimal/absent in the screenshot, but good for subtle depth if desired.
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px; /* Adjust padding as needed */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center content horizontally
+  flex: 1; /* Allows it to grow in the grid container */
+}
+
+.iconWrapper {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  // Background color will be set via inline style from props
+}
+
+.cardIcon {
+  font-size: 2.5rem; /* Size of the icon itself */
+  color: #2c3e50; /* Dark color for the icons themselves */
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1; /* Allows description to take up available space */
+}

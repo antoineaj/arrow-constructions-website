@@ -1,0 +1,35 @@
+// components/VisionMissionSection/VisionMissionSection.module.scss
+
+.visionMissionSection {
+  padding: 80px 20px;
+  background-color: #f1f3f5; /* More noticeable gray for better contrast */
+  border-top: 1px solid #e9ecef; /* Subtle top border for definition */
+  border-bottom: 1px solid #e9ecef; /* Subtle bottom border for definition */
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 40px 15px;
+  }
+}
+
+.container {
+  max-width: 1000px; /* Adjust max width for the two cards */
+  margin: 0 auto;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Responsive grid for cards */
+  gap: 30px; /* Space between cards */
+  justify-content: center; /* Center cards if there's extra space */
+  align-items: stretch; /* Make cards the same height */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+}
