@@ -1,0 +1,50 @@
+// components/ProjectsDisplay/ProjectsDisplay.module.scss
+
+.projectsDisplay {
+  padding: 60px 20px;
+  background: #f8f9fa;
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.noProjects {
+  text-align: center;
+  padding: 60px 20px;
+
+  p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
