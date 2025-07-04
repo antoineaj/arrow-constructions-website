@@ -2,7 +2,7 @@
 @use "../../styles/colors" as *;
 
 .footer {
-  background: linear-gradient(135deg, $color-secondary-start, $color-secondary-end);
+  background: #111827;
   color: $color-text-light; /* White text for better contrast */
   padding: 40px 20px 20px; /* Top, horizontal, bottom padding */
   font-family: Arial, sans-serif; /* Example font */
@@ -96,7 +96,7 @@
 }
 
 .contactIcon {
-  color: $color-primary-start; /* Orange icons for visual interest */
+  color: $color-text-light; /* Orange icons for visual interest */
   font-size: 1rem;
   flex-shrink: 0; // Prevent icon from shrinking
 }
@@ -106,7 +106,10 @@
   margin: 20px auto 0;
   text-align: center;
   font-size: 0.8rem;
-  color: rgba($color-text-light, 0.7); /* Slightly transparent white for copyright */
+  color: rgba(
+    $color-text-light,
+    0.7
+  ); /* Slightly transparent white for copyright */
   padding-top: 20px; /* Space below the line */
 }
 

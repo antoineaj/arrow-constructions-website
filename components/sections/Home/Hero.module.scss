@@ -3,7 +3,11 @@
 
 .hero {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, $color-primary-start, $color-primary-end);
+  background: linear-gradient(
+    135deg,
+    $color-secondary-start,
+    $color-secondary-end
+  );
 }
 
 .content {
@@ -52,7 +56,7 @@
 
 .primaryBtn {
   background: $color-text-light;
-  color: $color-primary-end;
+  color: $color-secondary-end;
   box-shadow: 0 4px 15px rgba($color-text-light, 0.3);
   border: 2px solid $color-text-light;
 
@@ -83,7 +87,7 @@
   }
 
   &:hover {
-    color: $color-primary-end;
+    color: $color-secondary-end;
 
     &::before {
       left: 0;
