@@ -1,0 +1,104 @@
+/* components/services/ServiceHero.module.scss */
+@use "../../../styles/colors" as *;
+
+.hero {
+  padding: 4rem 1rem;
+  background: linear-gradient(
+    135deg,
+    $color-secondary-start,
+    $color-secondary-end
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-text-light;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: rgba($color-text-light, 0.9);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: $color-text-light;
+  color: $color-secondary-end;
+  box-shadow: 0 4px 15px rgba($color-text-light, 0.3);
+  border: 2px solid $color-text-light;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($color-text-light, 0.4);
+    background: rgba($color-text-light, 0.9);
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  // Add a subtle background accent like the home hero
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(
+      135deg,
+      rgba($color-accent-start, 0.1),
+      rgba($color-info-start, 0.1)
+    );
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+.image {
+  border-radius: 15px;
+  max-width: 100%;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,107 @@
+// components/CallToActionSection/CallToActionSection.module.scss
+@use "../../../styles/colors" as *;
+
+.ctaSection {
+  background: linear-gradient(
+    135deg,
+    $color-secondary-start,
+    $color-secondary-end
+  );
+  color: #ffffff; /* White text color */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px; /* Adjust max width as needed */
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.ctaDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 700px; /* Limit width of description for readability */
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex; /* Use inline-flex for icon and text alignment */
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+  min-width: 220px; /* Ensure buttons have a minimum consistent width */
+
+  @media (max-width: 576px) {
+    width: 90%; /* Take up more width on very small screens */
+    max-width: 300px;
+  }
+}
+
+.buttonPrimary {
+  background-color: #ffffff; /* White background for primary */
+  color: $color-secondary-end; /* Blue text color */
+  border: 2px solid #ffffff; /* White border */
+
+  &:hover {
+    background-color: #f0f0f0; /* Slightly darker white on hover */
+    border-color: #f0f0f0;
+  }
+}
+
+.buttonSecondary {
+  background-color: transparent; /* Transparent background for secondary */
+  color: #ffffff; /* White text color */
+  border: 2px solid #ffffff; /* White border */
+
+  &:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Slight white overlay on hover */
+  }
+}
+
+.buttonIcon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}

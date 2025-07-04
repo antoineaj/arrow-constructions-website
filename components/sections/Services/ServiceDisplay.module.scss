@@ -1,0 +1,40 @@
+// components/MaintenanceServices/MaintenanceServices.module.scss
+
+.ServiceDisplay {
+  padding: 60px 20px;
+}
+
+.maintenanceServices {
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light background for the section */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* For centering the section title */
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid for cards */
+  gap: 30px; /* Space between cards */
+  justify-content: center; /* Center cards if there's extra space */
+  align-items: stretch; /* Make cards the same height */
+}
