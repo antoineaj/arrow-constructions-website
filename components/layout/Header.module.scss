@@ -40,6 +40,11 @@
   &:hover {
     color: $color-primary-start;
   }
+
+  &.active {
+    color: $color-primary-start;
+    font-weight: 600;
+  }
 }
 
 // Dropdown styles
@@ -60,6 +65,11 @@
 
   &:hover {
     color: $color-primary-start;
+  }
+
+  &.active {
+    color: $color-primary-start;
+    font-weight: 600;
   }
 }
 
@@ -109,5 +119,11 @@
   &:hover {
     background-color: #f8f9fa;
     color: $color-primary-start;
+  }
+
+  &.activeDropdownItem {
+    background-color: #f8f9fa;
+    color: $color-primary-start;
+    font-weight: 600;
   }
 }

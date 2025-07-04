@@ -5,9 +5,11 @@ import styles from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
 
   const serviceLinks = [
     { href: "/services/pre-construction", label: "Pre-construction" },
@@ -26,6 +28,17 @@ export default function Header() {
     setIsServicesOpen(false);
   };
 
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
+  const isServicesActive = () => {
+    return serviceLinks.some(service => pathname.startsWith(service.href));
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -38,13 +51,19 @@ export default function Header() {
           />
         </div>
         <nav className={styles.nav}>
-          <Link href="/">Home</Link>
+          <Link href="/" className={isActive("/") ? styles.active : ""}>
+            Home
+          </Link>
           <div
             className={styles.dropdown}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <span className={styles.dropdownButton}>
+            <span 
+              className={`${styles.dropdownButton} ${
+                isServicesActive() ? styles.active : ""
+              }`}
+            >
               Services
               <span
                 className={`${styles.arrow} ${
@@ -63,16 +82,24 @@ export default function Header() {
                 <Link
                   key={service.href}
                   href={service.href}
-                  className={styles.dropdownItem}
+                  className={`${styles.dropdownItem} ${
+                    isActive(service.href) ? styles.activeDropdownItem : ""
+                  }`}
                 >
                   {service.label}
                 </Link>
               ))}
             </div>
           </div>
-          <Link href="/projects">Projects</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/projects" className={isActive("/projects") ? styles.active : ""}>
+            Projects
+          </Link>
+          <Link href="/about" className={isActive("/about") ? styles.active : ""}>
+            About Us
+          </Link>
+          <Link href="/contact" className={isActive("/contact") ? styles.active : ""}>
+            Contact Us
+          </Link>
         </nav>
       </div>
     </header>
