@@ -6,7 +6,7 @@
     $color-secondary-start,
     $color-secondary-end
   );
-  color: #ffffff; /* White text color */
+  color: $color-text-light; /* White text color */
   padding: 60px 20px;
   text-align: center;
 }
@@ -74,28 +74,23 @@
 }
 
 .buttonPrimary {
-  background-color: #ffffff; /* White background for primary */
+  background-color: $color-text-light; /* White background for primary */
   color: $color-secondary-end; /* Blue text color */
-  border: 2px solid #ffffff; /* White border */
+  border: 2px solid $color-text-light; /* White border */
 
   &:hover {
-    background-color: #f0f0f0; /* Slightly darker white on hover */
-    border-color: #f0f0f0;
+    background-color: rgba($color-text-light, 0.9); /* Slightly darker white on hover */
+    border-color: rgba($color-text-light, 0.9);
   }
 }
 
 .buttonSecondary {
   background-color: transparent; /* Transparent background for secondary */
-  color: #ffffff; /* White text color */
-  border: 2px solid #ffffff; /* White border */
+  color: $color-text-light; /* White text color */
+  border: 2px solid $color-text-light; /* White border */
 
   &:hover {
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.1
-    ); /* Slight white overlay on hover */
+    background-color: rgba($color-text-light, 0.1); /* Slight white overlay on hover */
   }
 }
 

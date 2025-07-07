@@ -1,10 +1,12 @@
+@use "../../../styles/colors" as *;
+
 .projectsHero {
   background: linear-gradient(
     135deg,
-    #448bf2 0%,
-    #2f6fea 100%
+    $color-secondary-start 0%,
+    $color-secondary-end 100%
   ); /* Using brand secondary gradient */
-  color: #ffffff; /* White text color */
+  color: $color-text-light; /* White text color */
   padding: 40px 20px; /* Generous padding top/bottom */
   text-align: center;
   display: flex; /* Use flex to center content vertically if needed */

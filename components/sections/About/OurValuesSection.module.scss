@@ -1,6 +1,8 @@
+@use "../../../styles/colors" as *;
+
 .ourValuesSection {
   padding: 80px 20px;
-  background-color: #ffffff; /* White background as per the image */
+  background-color: $color-text-light; /* White background as per the image */
   text-align: center; /* Center the title and subtitle */
 
   @media (max-width: 768px) {
@@ -19,7 +21,7 @@
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 15px;
   line-height: 1.2;
 

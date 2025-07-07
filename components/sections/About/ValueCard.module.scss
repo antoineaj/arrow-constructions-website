@@ -1,5 +1,7 @@
+@use "../../../styles/colors" as *;
+
 .valueCard {
-  background-color: #ffffff;
+  background-color: $color-text-light;
   border-radius: 8px;
   // Box shadow is minimal/absent in the screenshot, but good for subtle depth if desired.
   // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -24,19 +26,19 @@
 
 .cardIcon {
   font-size: 2.5rem; /* Size of the icon itself */
-  color: #2c3e50; /* Dark color for the icons themselves */
+  color: $color-text-dark; /* Dark color for the icons themselves */
 }
 
 .cardTitle {
   font-size: 1.35rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 15px;
 }
 
 .cardDescription {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #555;
+  color: rgba($color-text-dark, 0.7);
   flex-grow: 1; /* Allows description to take up available space */
 }

@@ -1,6 +1,8 @@
+@use "../../../styles/colors" as *;
+
 .banner {
   padding: 2rem 1rem;
-  background-color: #ffffff;
+  background-color: $color-text-light;
   overflow: hidden;
 }
 
@@ -12,13 +14,13 @@
   h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #1a202c;
+    color: $color-text-dark;
     margin-bottom: 0.5rem;
   }
 
   p {
     font-size: 1.1rem;
-    color: #4a5568;
+    color: rgba($color-text-dark, 0.7);
     margin: 0;
   }
 }

@@ -1,6 +1,8 @@
+@use "../../../styles/colors" as *;
+
 .serviceOverview {
   padding: 60px 20px;
-  background-color: #f8f9fa; // Light background for the section
+  background-color: $color-bg-light; // Light background for the section
 }
 
 .container {
@@ -21,13 +23,13 @@
 
 .mainContent {
   flex: 2; // Takes more space than benefits
-  color: #333;
+  color: $color-text-dark;
 }
 
 .overviewTitle {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 25px;
 
   @media (max-width: 768px) {
@@ -39,7 +41,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 15px;
-  color: #555;
+  color: rgba($color-text-dark, 0.7);
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -47,8 +49,8 @@
 
 .benefitsSection {
   flex: 1; // Takes less space
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: $color-text-light;
+  border: 1px solid rgba($color-text-dark, 0.1);
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -57,7 +59,7 @@
 .benefitsTitle {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 20px;
 }
 
@@ -72,7 +74,7 @@
   align-items: center;
   margin-bottom: 15px;
   font-size: 1rem;
-  color: #444;
+  color: rgba($color-text-dark, 0.8);
 
   &:last-child {
     margin-bottom: 0;
@@ -80,7 +82,7 @@
 }
 
 .checkIcon {
-  color: #28a745; // Green color for checkmark
+  color: $color-accent-start; // Green color for checkmark
   font-size: 1.1rem;
   margin-right: 10px;
   min-width: 20px; // Prevent text from overlapping icon
@@ -96,8 +98,8 @@
 }
 
 .highlightCard {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: $color-text-light;
+  border: 1px solid rgba($color-text-dark, 0.1);
   border-radius: 8px;
   padding: 30px;
   text-align: center;
@@ -114,7 +116,7 @@
 }
 
 .highlightIconWrapper {
-  background-color: #e6f7ed; // Light green background for icon
+  background-color: rgba($color-accent-start, 0.1); // Light green background for icon
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -125,19 +127,19 @@
 }
 
 .highlightIcon {
-  color: #28a745; // Green color for highlight icons
+  color: $color-accent-start; // Green color for highlight icons
   font-size: 2rem;
 }
 
 .highlightTitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 10px;
 }
 
 .highlightDescription {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #666;
+  color: rgba($color-text-dark, 0.6);
 }

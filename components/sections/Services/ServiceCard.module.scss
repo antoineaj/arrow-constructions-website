@@ -1,5 +1,7 @@
+@use "../../../styles/colors" as *;
+
 .serviceCard {
-  background-color: #ffffff;
+  background-color: $color-text-light;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 30px;
@@ -17,7 +19,7 @@
 }
 
 .iconWrapper {
-  background-color: #e6f7ed; // Light green background from image
+  background-color: rgba($color-accent-start, 0.1); // Light green background
   border-radius: 8px; /* Square with rounded corners */
   width: 60px;
   height: 60px;
@@ -28,21 +30,21 @@
 }
 
 .cardIcon {
-  color: #28a745; // Green color for the icon
+  color: $color-accent-start; // Green color for the icon
   font-size: 2.2rem;
 }
 
 .cardTitle {
   font-size: 1.35rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: $color-text-dark;
   margin-bottom: 15px;
 }
 
 .cardDescription {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: rgba($color-text-dark, 0.7);
   margin-bottom: 20px;
   flex-grow: 1; /* Allows description to push features list to bottom if needed */
 }
@@ -56,7 +58,7 @@
 
 .featureItem {
   font-size: 0.9rem;
-  color: #666;
+  color: rgba($color-text-dark, 0.6);
   margin-bottom: 8px;
   line-height: 1.5;
   position: relative;
@@ -68,7 +70,7 @@
 
   &::before {
     content: "\2022"; /* Unicode for a simple black bullet point */
-    color: #666; // Or a slightly darker color
+    color: rgba($color-text-dark, 0.6); // Or a slightly darker color
     position: absolute;
     left: 0;
     top: 0;

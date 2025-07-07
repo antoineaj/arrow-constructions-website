@@ -1,10 +1,12 @@
+@use "../../../styles/colors" as *;
+
 .contactHero {
   background: linear-gradient(
     135deg,
-    #448bf2 0%,
-    #2f6fea 100%
+    $color-secondary-start 0%,
+    $color-secondary-end 100%
   ); /* Using brand secondary gradient */
-  color: #ffffff;
+  color: $color-text-light;
   padding: 40px 20px;
   text-align: center;
   display: flex;
