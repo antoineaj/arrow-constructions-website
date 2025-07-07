@@ -56,8 +56,8 @@ export default function Header() {
             <Image
               src="/assets/images/Logo AC.jpeg"
               alt="Company Logo"
-              width={200}
-              height={80}
+              width={150}
+              height={70}
             />
           </Link>
         </div>
@@ -159,8 +159,8 @@ export default function Header() {
               <Image
                 src="/assets/images/Logo AC.jpeg"
                 alt="Company Logo"
-                width={150}
-                height={60}
+                width={100}
+                height={40}
               />
             </Link>
           </div>
