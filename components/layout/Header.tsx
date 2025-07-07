@@ -52,12 +52,14 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoSection}>
-          <Image
-            src="/assets/images/Logo AC.jpeg"
-            alt="Company Logo"
-            width={200}
-            height={80}
-          />
+          <Link href="/" className={styles.logoLink}>
+            <Image
+              src="/assets/images/Logo AC.jpeg"
+              alt="Company Logo"
+              width={200}
+              height={80}
+            />
+          </Link>
         </div>
         <nav className={styles.nav}>
           <Link href="/" className={isActive("/") ? styles.active : ""}>
@@ -149,12 +151,18 @@ export default function Header() {
           }`}
         >
           <div className={styles.mobileNavHeader}>
-            <Image
-              src="/assets/images/Logo AC.jpeg"
-              alt="Company Logo"
-              width={150}
-              height={60}
-            />
+            <Link
+              href="/"
+              className={styles.mobileLogoLink}
+              onClick={closeMobileMenu}
+            >
+              <Image
+                src="/assets/images/Logo AC.jpeg"
+                alt="Company Logo"
+                width={150}
+                height={60}
+              />
+            </Link>
           </div>
           <div className={styles.mobileNavContent}>
             <Link
