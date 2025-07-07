@@ -1,4 +1,3 @@
-// components/OurValuesSection/OurValuesSection.tsx
 import React from "react";
 import styles from "./OurValuesSection.module.scss";
 

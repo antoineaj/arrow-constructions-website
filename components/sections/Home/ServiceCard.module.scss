@@ -1,13 +1,13 @@
-// components/SimpleCard/SimpleCard.module.scss
+@use "../../../styles/colors" as *;
 
 .card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba($color-text-dark, 0.1);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $color-text-light;
   transition: transform 0.2s ease-in-out;
   text-align: start;
 }
@@ -18,7 +18,7 @@
   padding-top: 75%; /* 4:3 aspect ratio (height / width * 100%) - Adjust if your images have different aspect ratios */
   // Or use a fixed height if preferred: height: 200px;
   overflow: hidden;
-  background-color: #f0f0f0; // Placeholder background
+  background-color: rgba($color-text-dark, 0.05); // Placeholder background
 }
 
 .iconOverlay {

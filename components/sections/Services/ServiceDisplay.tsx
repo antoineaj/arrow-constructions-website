@@ -1,4 +1,3 @@
-// components/ServiceDisplay/ServiceDisplay.tsx
 import React from "react";
 import styles from "./ServiceDisplay.module.scss";
 import { IconType } from "react-icons";

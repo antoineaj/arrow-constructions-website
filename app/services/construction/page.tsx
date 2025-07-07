@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import ServiceOverview from "../../../components/sections/Services/ServiceOverview";
 import ServiceDisplay from "../../../components/sections/Services/ServiceDisplay";
-import CallToActionSection from "../../../components/sections/Services/CallToActionSection";
 import ServiceHero from "../../../components/sections/Services/ServiceHero";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 
@@ -96,7 +95,6 @@ export default function ConstructionService() {
         sectionTitle="Construction Services"
         services={constructionServices}
       />
-      <CallToActionSection />
     </>
   );
 }

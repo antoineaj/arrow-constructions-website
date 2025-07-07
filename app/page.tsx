@@ -1,5 +1,3 @@
-// app/page.tsx
-
 "use client";
 
 import Metrics from "../components/common/Metrics";

@@ -1,6 +1,4 @@
-// components/Footer/Footer.tsx
 import React from "react";
-import Image from "next/image"; // If you decide to add a logo
 import Link from "next/link"; // For navigation links
 import styles from "./Footer.module.scss";
 import {

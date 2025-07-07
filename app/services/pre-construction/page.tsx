@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa"; // Import icons here for passing as props
 import ServiceOverview from "../../../components/sections/Services/ServiceOverview";
 import ServiceDisplay from "../../../components/sections/Services/ServiceDisplay";
-import CallToActionSection from "../../../components/sections/Services/CallToActionSection";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 
 export default function PreConstructionService() {
@@ -96,7 +95,6 @@ export default function PreConstructionService() {
         sectionTitle="Pre-Construction Services"
         services={preConstructionServices}
       />
-      <CallToActionSection />
     </>
   );
 }

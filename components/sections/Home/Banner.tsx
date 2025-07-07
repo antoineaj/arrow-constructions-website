@@ -4,17 +4,20 @@ import styles from "./Banner.module.scss";
 import Image from "next/image";
 
 const clients = [
-  { src: "/assets/images/sgbl.png", alt: "SGBL" },
-  { src: "/assets/images/bankaudi.png", alt: "Bank Audi" },
-  { src: "/assets/images/converse.png", alt: "Converse" },
-  { src: "/assets/images/tinol.png", alt: "Tinol" },
-  { src: "/assets/images/bankaudi.png", alt: "Bank Audi" },
-  { src: "/assets/images/sgbl.png", alt: "SGBL" },
-  { src: "/assets/images/tinol.png", alt: "Tinol" },
-  { src: "/assets/images/zaarour.png", alt: "Zaarour Club" },
-  { src: "/assets/images/zaarour.png", alt: "Zaarour Club" },
-  { src: "/assets/images/converse.png", alt: "Converse" },
-  { src: "/assets/images/zaarour.png", alt: "Zaarour Club" },
+  { src: "/assets/images/clients/bankaudi.png", alt: "Bank Audi" },
+  { src: "/assets/images/clients/bclbank.png", alt: "BCL Bank" },
+  { src: "/assets/images/clients/converse.png", alt: "Converse" },
+  { src: "/assets/images/clients/ericsson.jpg", alt: "Ericsson" },
+  { src: "/assets/images/clients/fnb.png", alt: "FNB" },
+  {
+    src: "/assets/images/clients/librarieantoine.png",
+    alt: "Librarie Antoine",
+  },
+  { src: "/assets/images/clients/medtronic.jpg", alt: "Medtronic" },
+  { src: "/assets/images/clients/sgbl.png", alt: "SGBL" },
+  { src: "/assets/images/clients/tinol.jpg", alt: "Tinol" },
+  { src: "/assets/images/clients/zaarourclub.png", alt: "Zaarour Club" },
+  { src: "/assets/images/clients/zuhairmurad.png", alt: "Zuhair Murad" },
 ];
 
 export default function Banner() {
@@ -37,7 +40,7 @@ export default function Banner() {
                 alt={client.alt}
                 width={120}
                 height={120}
-                priority={index < 5}
+                priority={index < 10}
               />
             </div>
           ))}

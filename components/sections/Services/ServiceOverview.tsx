@@ -1,4 +1,3 @@
-// components/ServiceOverview/ServiceOverview.tsx
 import React from "react";
 import styles from "./ServiceOverview.module.scss";
 import { FaCheckCircle, FaCalendarAlt, FaTools } from "react-icons/fa"; // Icons for benefits and highlight cards

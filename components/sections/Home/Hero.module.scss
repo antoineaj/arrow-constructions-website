@@ -1,4 +1,3 @@
-/* components/home/Hero.module.scss */
 @use "../../../styles/colors" as *;
 
 .hero {
@@ -131,5 +130,12 @@
 
   &:hover {
     transform: translateY(-5px);
+  }
+}
+
+// Hide hero image on mobile screens
+@media (max-width: 768px) {
+  .image {
+    display: none;
   }
 }
