@@ -127,3 +127,165 @@
     font-weight: 600;
   }
 }
+
+// Mobile Navigation Styles
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  background-color: #4a5568;
+  margin: 2px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger span:nth-child(1) {
+  width: 100%;
+}
+
+.hamburger span:nth-child(2) {
+  width: 75%;
+}
+
+.hamburger span:nth-child(3) {
+  width: 100%;
+}
+
+.hamburgerOpen span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.mobileNavOpen {
+  right: 0;
+}
+
+.mobileNavHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.mobileNavContent {
+  padding: 1rem 0;
+}
+
+.mobileNavItem {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileNavItem:hover {
+  background-color: #f8f9fa;
+  color: $color-primary-start;
+}
+
+.mobileNavItemActive {
+  color: $color-primary-start;
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.mobileServicesSection {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileServicesTitle {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #f8f9fa;
+}
+
+.mobileServicesItems {
+  background-color: #fafafa;
+}
+
+.mobileNavSubItem {
+  display: block;
+  padding: 0.75rem 2rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileNavSubItem:hover {
+  background-color: #f0f0f0;
+  color: $color-primary-start;
+}
+
+.mobileNavSubItem.mobileNavItemActive {
+  color: $color-primary-start;
+  font-weight: 600;
+  background-color: #f0f0f0;
+}
+
+// Responsive breakpoints
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+}
