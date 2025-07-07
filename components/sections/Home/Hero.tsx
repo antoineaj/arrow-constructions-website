@@ -1,4 +1,3 @@
-// components/home/Hero.tsx
 "use client";
 
 import styles from "./Hero.module.scss";

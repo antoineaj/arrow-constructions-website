@@ -1,10 +1,8 @@
-// components/ProjectsFilter/ProjectsFilter.module.scss
-
 .projectsFilter {
   background: #f8f9fa;
   padding: 30px 20px;
   border-bottom: 1px solid #e9ecef;
-  
+
   @media (max-width: 768px) {
     padding: 20px 15px;
   }
@@ -21,11 +19,11 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  
+
   @media (max-width: 768px) {
     gap: 12px;
   }
-  
+
   @media (max-width: 480px) {
     gap: 8px;
   }
@@ -42,30 +40,29 @@
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
-  font-family: "Inter", sans-serif;
-  
+
   &:hover {
     background: #e9ecef;
     border-color: #adb5bd;
     color: #495057;
   }
-  
+
   &.active {
     background: #448bf2;
     border-color: #448bf2;
     color: #ffffff;
-    
+
     &:hover {
       background: #2f6fea;
       border-color: #2f6fea;
     }
   }
-  
+
   @media (max-width: 768px) {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-  
+
   @media (max-width: 480px) {
     padding: 8px 16px;
     font-size: 0.85rem;

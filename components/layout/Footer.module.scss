@@ -1,11 +1,9 @@
-// components/Footer/Footer.module.scss
 @use "../../styles/colors" as *;
 
 .footer {
   background: #111827;
   color: $color-text-light; /* White text for better contrast */
   padding: 40px 20px 20px; /* Top, horizontal, bottom padding */
-  font-family: Arial, sans-serif; /* Example font */
 }
 
 .container {

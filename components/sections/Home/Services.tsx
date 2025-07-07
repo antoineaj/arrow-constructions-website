@@ -1,5 +1,3 @@
-// components/home/Services.tsx
-
 "use client";
 
 import styles from "./Services.module.scss";

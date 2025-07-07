@@ -1,4 +1,3 @@
-// components/services/ServiceHero.tsx
 import styles from "./ServiceHero.module.scss";
 import Image from "next/image";
 import Link from "next/link";

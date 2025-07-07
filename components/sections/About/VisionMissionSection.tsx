@@ -1,4 +1,3 @@
-// components/VisionMissionSection/VisionMissionSection.tsx
 import React from "react";
 import styles from "./VisionMissionSection.module.scss";
 

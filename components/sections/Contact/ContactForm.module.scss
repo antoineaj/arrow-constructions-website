@@ -1,9 +1,6 @@
-// components/Contact/ContactForm.module.scss
-
 .contactSection {
   padding: 80px 20px;
   background-color: #f8f9fa;
-  font-family: "Inter", sans-serif;
 
   @media (max-width: 768px) {
     padding: 60px 15px;
@@ -99,7 +96,6 @@
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  font-family: inherit;
 
   &:focus {
     outline: none;

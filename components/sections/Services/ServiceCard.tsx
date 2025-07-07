@@ -1,4 +1,3 @@
-// components/ServiceCard/ServiceCard.tsx
 import React from "react";
 import styles from "./ServiceCard.module.scss";
 import { IconType } from "react-icons"; // Recommended for type-checking icons

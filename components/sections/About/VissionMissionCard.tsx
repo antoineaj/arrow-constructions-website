@@ -1,4 +1,3 @@
-// components/VisionMissionCard/VisionMissionCard.tsx
 import React from "react";
 import styles from "./VissionMissionCard.module.scss"; // Adjust the path as necessary
 import { IconType } from "react-icons"; // For typing react-icons components

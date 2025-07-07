@@ -1,4 +1,3 @@
-// components/ProductCard/ProductCard.tsx
 import Image from "next/image";
 import styles from "./ServiceCard.module.scss";
 import { IconType } from "react-icons";

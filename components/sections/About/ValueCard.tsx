@@ -1,4 +1,3 @@
-// components/ValueCard/ValueCard.tsx
 import React from "react";
 import styles from "./ValueCard.module.scss";
 import { IconType } from "react-icons"; // For typing react-icons components
