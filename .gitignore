@@ -21,6 +21,7 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+.next/
 *.sublime-workspace
 *.sublime-project
 
