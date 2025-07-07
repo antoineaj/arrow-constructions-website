@@ -4,7 +4,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 
 export const metadata = {
-  title: "MEP Subcontractor Co.",
+  title: "Arrow Constructions",
   description: "Professional Mechanical, Electrical, and Plumbing Services",
   keywords: [
     "MEP",
