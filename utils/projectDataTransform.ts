@@ -28,12 +28,12 @@ const typeToIndustryMap: Record<string, string> = {
 // Will implement a more dynamic image loading in the future
 // For now, using a single image for all types
 const defaultImages: Record<string, string> = {
-  Residential: "/assets/images/constructionService.jpg",
-  Banking: "/assets/images/constructionService.jpg",
-  Offices: "/assets/images/constructionService.jpg",
-  "Restaurants-Hotels": "/assets/images/constructionService.jpg",
-  Commercial: "/assets/images/constructionService.jpg",
-  Miscellaneous: "/assets/images/constructionService.jpg",
+  Residential: "/assets/images/constructionService.png",
+  Banking: "/assets/images/constructionService.png",
+  Offices: "/assets/images/constructionService.png",
+  "Restaurants-Hotels": "/assets/images/constructionService.png",
+  Commercial: "/assets/images/constructionService.png",
+  Miscellaneous: "/assets/images/constructionService.png",
 };
 
 // Generate descriptions based on project type
