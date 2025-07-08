@@ -19,13 +19,68 @@ interface FeaturedProjectsSliderProps {
   projects: Project[];
 }
 
+// HARDCODED FEATURED PROJECTS CONFIGURATION
+// Edit this section to change which projects are featured
+const FEATURED_PROJECTS_CONFIG = {
+  // Feature by project names (partial matches work)
+  featuredProjectNames: [
+    "Coral Fuel Terminal",
+    "Liquigas Terminal",
+    "RKAJ Villa",
+    "Zuhair Murad HQ",
+    "Porche Service Center",
+    "Karantina Hospital - Intesive Care Building for Children",
+    "Pierre Y Amigos",
+    "First National Bank",
+    "Depeche Mode",
+    "Converse",
+  ],
+
+  // Maximum number of featured projects to show
+  maxFeatured: 10,
+
+  // Whether to prioritize ongoing projects
+  prioritizeOngoing: true,
+};
+
 export default function FeaturedProjectsSlider({
   projects,
 }: FeaturedProjectsSliderProps) {
   const [currentOffset, setCurrentOffset] = useState(0);
 
-  // Show more projects for the banner effect
-  const featuredProjects = projects.slice(0, Math.min(8, projects.length));
+  // Filter projects based on hardcoded featured criteria
+  const getFeaturedProjects = () => {
+    const { featuredProjectNames, maxFeatured, prioritizeOngoing } =
+      FEATURED_PROJECTS_CONFIG;
+
+    let filtered: Project[] = [];
+
+    // Filter by project names
+    if (featuredProjectNames && featuredProjectNames.length > 0) {
+      filtered = projects.filter((project) =>
+        featuredProjectNames.some((name) =>
+          project.title.toLowerCase().includes(name.toLowerCase())
+        )
+      );
+    } else {
+      // If no specific selection, take all projects
+      filtered = [...projects];
+    }
+
+    // Prioritize ongoing projects if requested
+    if (prioritizeOngoing) {
+      filtered.sort((a, b) => {
+        if (a.isOngoing && !b.isOngoing) return -1;
+        if (!a.isOngoing && b.isOngoing) return 1;
+        return 0;
+      });
+    }
+
+    // Ensure we don't exceed maxFeatured
+    return filtered.slice(0, maxFeatured);
+  };
+
+  const featuredProjects = getFeaturedProjects();
 
   // Duplicate projects for seamless infinite scroll
   const displayProjects = [...featuredProjects, ...featuredProjects];
