@@ -7,7 +7,7 @@ const clients = [
   { src: "/assets/images/clients/bankaudi.png", alt: "Bank Audi" },
   { src: "/assets/images/clients/bclbank.png", alt: "BCL Bank" },
   { src: "/assets/images/clients/converse.png", alt: "Converse" },
-  { src: "/assets/images/clients/ericsson.jpg", alt: "Ericsson" },
+  { src: "/assets/images/clients/ericsson.png", alt: "Ericsson" },
   { src: "/assets/images/clients/fnb.png", alt: "FNB" },
   {
     src: "/assets/images/clients/librarieantoine.png",
