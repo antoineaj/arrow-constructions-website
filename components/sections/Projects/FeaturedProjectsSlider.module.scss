@@ -1,11 +1,11 @@
 .featuredSlider {
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 }
 
@@ -17,7 +17,7 @@
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     margin-bottom: 30px;
@@ -54,119 +54,98 @@
 
 .sliderContainer {
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-y;
-
-  &:active {
-    cursor: grabbing;
-  }
+  width: 100%;
 }
 
 .slider {
-  position: relative;
-  height: 500px;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.projectCard {
+  flex: 0 0 280px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
 
   @media (max-width: 768px) {
-    height: 600px;
+    flex: 0 0 250px;
   }
 
   @media (max-width: 480px) {
-    height: 700px;
+    flex: 0 0 220px;
   }
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.5s ease-in-out;
-
-  &.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slideContent {
-  display: flex;
-  height: 100%;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
-.imageSection {
+.cardImage {
   position: relative;
-  flex: 1;
-  height: 100%;
+  height: 160px;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 300px;
+    height: 140px;
   }
 }
 
-.projectImage {
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 
-  .slide:hover & {
+  .projectCard:hover & {
     transform: scale(1.05);
   }
 }
 
-.textSection {
-  flex: 1;
-  padding: 40px;
+.overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 8px;
+}
+
+.industryTag {
+  background: #448bf2;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardContent {
+  padding: 20px;
 
   @media (max-width: 768px) {
-    padding: 30px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 20px;
+    padding: 16px;
   }
 }
 
 .projectTitle {
-  font-size: 2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #212529;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1.3;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.25rem;
-  }
-}
-
-.projectDescription {
-  color: #6c757d;
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -175,21 +154,16 @@
 
 .projectDetails {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    gap: 12px;
-  }
+  flex-direction: column;
+  gap: 8px;
 }
 
 .location {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -200,70 +174,16 @@
 
 .date {
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
-.dotsContainer {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-
-  @media (max-width: 768px) {
-    bottom: 15px;
-  }
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.8);
-    transform: scale(1.2);
-  }
-
-  &.activeDot {
-    background: #ffffff;
-    transform: scale(1.3);
-  }
-}
-
-// Animation for smooth transitions
-@keyframes fadeInUp {
+// Animation for continuous movement
+@keyframes slide {
   from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-100%);
   }
-}
-
-.slide.active .projectTitle,
-.slide.active .projectDescription,
-.slide.active .projectDetails {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.slide.active .projectTitle {
-  animation-delay: 0.1s;
-}
-
-.slide.active .projectDescription {
-  animation-delay: 0.2s;
-}
-
-.slide.active .projectDetails {
-  animation-delay: 0.3s;
 }
