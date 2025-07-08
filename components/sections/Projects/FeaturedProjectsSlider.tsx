@@ -124,7 +124,7 @@ export default function FeaturedProjectsSlider({
         return "#9333ea";
       case "restaurants-hotels":
         return "#dc3545";
-      case "retail":
+      case "commercial":
         return "#fd7e14";
       case "miscellaneous":
         return "#6c757d";

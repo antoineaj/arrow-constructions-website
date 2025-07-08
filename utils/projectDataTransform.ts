@@ -5,7 +5,7 @@ const typeToIndustryMap: Record<string, string> = {
   // CSV industry types mapped to filter categories
   archives: "Miscellaneous",
   banking: "Banking",
-  commercial: "Retail",
+  commercial: "Commercial",
   diplomatic: "Miscellaneous",
   gym: "Miscellaneous",
   healthcare: "Miscellaneous",
@@ -21,7 +21,6 @@ const typeToIndustryMap: Record<string, string> = {
   office: "Offices",
   offices: "Offices",
   restaurant: "Restaurants-Hotels",
-  retail: "Retail",
   miscellaneous: "Miscellaneous",
 };
 
@@ -33,7 +32,7 @@ const defaultImages: Record<string, string> = {
   Banking: "/assets/images/constructionService.jpg",
   Offices: "/assets/images/constructionService.jpg",
   "Restaurants-Hotels": "/assets/images/constructionService.jpg",
-  Retail: "/assets/images/constructionService.jpg",
+  Commercial: "/assets/images/constructionService.jpg",
   Miscellaneous: "/assets/images/constructionService.jpg",
 };
 
@@ -50,8 +49,8 @@ const generateDescription = (type: string, name: string): string => {
       "Smart building systems integration with comprehensive MEP solutions.",
     "Restaurants-Hotels":
       "Full hospitality MEP installation with advanced climate control and comfort systems.",
-    Retail:
-      "Comprehensive MEP systems designed for optimal retail operations and customer experience.",
+    Commericial:
+      "Comprehensive MEP systems designed for optimal commercial operations and customer experience.",
     Miscellaneous:
       "Specialized MEP systems tailored to specific operational requirements.",
   };

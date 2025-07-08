@@ -5,14 +5,17 @@ interface ProjectsFilterProps {
   onFilterChange: (filter: string) => void;
 }
 
-export default function ProjectsFilter({ activeFilter, onFilterChange }: ProjectsFilterProps) {
+export default function ProjectsFilter({
+  activeFilter,
+  onFilterChange,
+}: ProjectsFilterProps) {
   const filters = [
     { id: "all", label: "All Projects" },
     { id: "residential", label: "Residential" },
     { id: "banking", label: "Banking" },
     { id: "offices", label: "Offices" },
     { id: "restaurants-hotels", label: "Restaurants/Hotels" },
-    { id: "retail", label: "Retail" },
+    { id: "commercial", label: "Commercial" },
     { id: "miscellaneous", label: "Miscellaneous" },
   ];
 
