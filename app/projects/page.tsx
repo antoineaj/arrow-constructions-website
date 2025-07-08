@@ -5,83 +5,63 @@ import ProjectsHero from "../../components/sections/Projects/ProjectsHero";
 import FeaturedProjectsSlider from "../../components/sections/Projects/FeaturedProjectsSlider";
 import ProjectsFilter from "../../components/sections/Projects/ProjectsFilter";
 import ProjectsDisplay from "../../components/sections/Projects/ProjectsDisplay";
+import { useProjects } from "../../hooks/useProjects";
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const { projects, loading, error } = useProjects();
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
   };
 
-  // Sample project data - replace with your actual data
-  const projects = [
-    {
-      id: "1",
-      industry: "Residential",
-      title: "Luxury Apartment Complex",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Complete MEP installation for 200-unit residential complex with energy-efficient systems.",
-      location: "Downtown District",
-      dateCompleted: "2024",
-      isOngoing: false,
-    },
-    {
-      id: "2",
-      industry: "Banking",
-      title: "Regional Bank Headquarters",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Advanced security and climate control systems for 15-story banking facility.",
-      location: "Financial District",
-      dateCompleted: "2024",
-      isOngoing: false,
-    },
-    {
-      id: "3",
-      industry: "Offices",
-      title: "Corporate Office Tower",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Smart building systems integration for 25-floor corporate headquarters.",
-      location: "Business Park",
-      dateCompleted: "2023",
-      isOngoing: false,
-    },
-    {
-      id: "4",
-      industry: "Retail",
-      title: "Shopping Mall Complex",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Comprehensive MEP systems for large-scale retail development.",
-      location: "City Center",
-      dateCompleted: "2024",
-      isOngoing: false,
-    },
-    {
-      id: "5",
-      industry: "Restaurants-Hotels",
-      title: "Luxury Hotel Resort",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Full hospitality MEP installation with advanced climate control.",
-      location: "Tourist District",
-      dateCompleted: "Ongoing",
-      isOngoing: true,
-    },
-    {
-      id: "6",
-      industry: "Miscellaneous",
-      title: "Industrial Facility",
-      image: "/assets/images/constructionService.jpg", // Replace with actual project image
-      description:
-        "Specialized MEP systems for manufacturing and industrial operations.",
-      location: "Industrial Zone",
-      dateCompleted: "2023",
-      isOngoing: false,
-    },
-  ];
+  // Show loading state
+  if (loading) {
+    return (
+      <main>
+        <ProjectsHero />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "400px",
+            fontSize: "18px",
+            color: "#666",
+          }}
+        >
+          Loading projects...
+        </div>
+      </main>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <main>
+        <ProjectsHero />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "400px",
+            fontSize: "18px",
+            color: "#dc3545",
+            textAlign: "center",
+            padding: "20px",
+          }}
+        >
+          <p>Error loading projects: {error}</p>
+          <p style={{ fontSize: "14px", color: "#666", marginTop: "10px" }}>
+            Please check your Google Sheets configuration and try again.
+          </p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -91,7 +71,11 @@ export default function ProjectsPage() {
         activeFilter={activeFilter}
         onFilterChange={handleFilterChange}
       />
-      <ProjectsDisplay activeFilter={activeFilter} projects={projects} />
+      <ProjectsDisplay
+        activeFilter={activeFilter}
+        projects={projects}
+        loading={loading}
+      />
     </main>
   );
 }

@@ -15,16 +15,30 @@ interface Project {
 interface ProjectsDisplayProps {
   activeFilter: string;
   projects: Project[];
+  loading?: boolean;
 }
 
 export default function ProjectsDisplay({
   activeFilter,
   projects,
+  loading = false,
 }: ProjectsDisplayProps) {
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "all") return true;
     return project.industry.toLowerCase().replace(/\s+/g, "-") === activeFilter;
   });
+
+  if (loading) {
+    return (
+      <section className={styles.projectsDisplay}>
+        <div className={styles.container}>
+          <div className={styles.loadingState}>
+            <p>Loading projects...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.projectsDisplay}>
