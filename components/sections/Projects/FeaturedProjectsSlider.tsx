@@ -27,10 +27,8 @@ export default function FeaturedProjectsSlider({
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  // Filter for featured projects (recent ones and ongoing projects)
-  const featuredProjects = projects.filter(
-    (project) => project.isOngoing || project.dateCompleted === "2024"
-  );
+  // Filter for featured projects (show first 5 projects or all if less than 5)
+  const featuredProjects = projects.slice(0, Math.min(5, projects.length));
 
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
