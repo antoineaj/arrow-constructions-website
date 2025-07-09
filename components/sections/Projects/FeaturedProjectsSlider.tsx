@@ -26,13 +26,13 @@ const FEATURED_PROJECTS_CONFIG = {
   featuredProjectNames: [
     "Coral Fuel Terminal",
     "Liquigas Terminal",
-    "RKAJ Villa",
+    "Tinol Offices & Showroom",
     "Zuhair Murad HQ",
     "Porche Service Center",
     "Karantina Hospital - Intesive Care Building for Children",
     "Pierre Y Amigos",
-    "First National Bank",
-    "Depeche Mode",
+    "Zaarour Club Lake",
+    "Zaarour Club Ski Station",
     "Converse",
   ],
 

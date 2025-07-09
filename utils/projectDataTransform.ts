@@ -36,6 +36,39 @@ const defaultImages: Record<string, string> = {
   Miscellaneous: "/assets/images/constructionService.png",
 };
 
+// Specific images for projects based on title/name
+// Add new entries here to assign specific images to projects
+const projectSpecificImages: Record<string, string> = {
+  // Format: "Project Title": "/path/to/image.png"
+  "Coral Fuel Terminal": "/assets/images/featured/coralfuelterminal.png",
+  "Liquigas Terminal": "/assets/images/featured/liquigaz.png",
+  "Tinol Offices & Showroom": "/assets/images/featured/tinol.png",
+  "Zuhair Murad HQ": "/assets/images/featured/zuhairmurad.png",
+  "Porche Service Center": "/assets/images/featured/porscheservicecenter.png",
+  "Karantina Hospital - Intesive Care Building for Children":
+    "/assets/images/featured/karantinahospital.png",
+  "Pierre Y Amigos": "/assets/images/featured/pierreyamigos.png",
+  "Zaarour Club Lake": "/assets/images/featured/zaarourclublake.png",
+  "Zaarour Club Ski Station":
+    "/assets/images/featured/zaarourclubskistation.png",
+  Converse: "/assets/images/featured/converse.png",
+
+  // Add more project-specific images here as needed
+  // "Your Project Name": "/assets/images/projects/your-project.png",
+};
+
+// Function to get the appropriate image for a project
+const getProjectImage = (projectTitle: string, industry: string): string => {
+  // First, try to find a specific image for this project title
+  const specificImage = projectSpecificImages[projectTitle];
+  if (specificImage) {
+    return specificImage;
+  }
+
+  // If no specific image found, use the default for the industry
+  return defaultImages[industry];
+};
+
 // Generate descriptions based on project type
 // Will implement a more dynamic description generation in the future
 // For now, using static descriptions based on type
@@ -88,7 +121,7 @@ export function transformGoogleSheetsData(
       id: sheetsProject.id,
       industry,
       title: sheetsProject.name,
-      image: defaultImages[industry],
+      image: getProjectImage(sheetsProject.name, industry),
       description: generateDescription(industry, sheetsProject.name),
       location: sheetsProject.location,
       dateCompleted: isOngoing ? "Ongoing" : sheetsProject.dateCompleted,
