@@ -9,6 +9,7 @@ interface ProjectCardProps {
   location: string;
   dateCompleted: string;
   isOngoing?: boolean;
+  priority?: boolean; // Add priority prop for above-the-fold optimization
 }
 
 export default function ProjectCard({
@@ -19,6 +20,7 @@ export default function ProjectCard({
   location,
   dateCompleted,
   isOngoing = false,
+  priority = false,
 }: ProjectCardProps) {
   const getIndustryColor = (industry: string) => {
     switch (industry.toLowerCase()) {
@@ -47,7 +49,12 @@ export default function ProjectCard({
           alt={title}
           width={400}
           height={250}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: "cover" }}
           className={styles.projectImage}
+          priority={priority}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECA//EACUQAAIBAwMDBQEAAAAAAAAAAAECEQADIQQSMWEFQVFxEyKBkfD/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEhMf/aAAwDAQACEQMRAD8A2ltrTi7cZA4UkwSDgjsQZNLWONLGFmNsTwK9Jj2I4Pb41w1HqGnwYJHt5qvaGmkEltwfEAmT+K5YSEbVjSs8QNhBMdxWXa0T7u3ckgLjAGBRRVJMc1n/9k="
         />
       </div>
       <div className={styles.cardContent}>

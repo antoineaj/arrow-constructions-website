@@ -153,9 +153,14 @@ export default function FeaturedProjectsSlider({
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={250}
-                    height={150}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                    style={{ objectFit: "cover" }}
                     className={styles.image}
+                    priority={index < 3} // Prioritize first 3 featured images
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECA//EACUQAAIBAwMDBQEAAAAAAAAAAAECEQADIQQSMWEFQVFxEyKBkfD/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEhMf/aAAwDAQACEQMRAD8A2ltrTi7cZA4UkwSDgjsQZNLWONLGFmNsTwK9Jj2I4Pb41w1HqGnwYJHt5qvaGmkEltwfEAmT+K5YSEbVjSs8QNhBMdxWXa0T7u3ckgLjAGBRRVJMc1n/9k="
                   />
                   <div className={styles.overlay}>
                     <span

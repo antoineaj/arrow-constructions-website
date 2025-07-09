@@ -46,3 +46,70 @@
     }
   }
 }
+
+.loadMoreBtn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2),
+      0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    margin: 30px auto 0;
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    margin: 24px auto 0;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.loadingState {
+  text-align: center;
+  padding: 60px 20px;
+
+  p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
