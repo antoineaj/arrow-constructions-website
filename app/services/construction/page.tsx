@@ -79,7 +79,7 @@ export default function ConstructionService() {
       <ServiceHero
         title="Construction"
         description="From bid evaluation to on-site execution, we manage every phase of construction with precision, accountability, and technical excellence."
-        imageSrc="/assets/images/constructionService.jpg"
+        imageSrc="/assets/images/constructionService.png"
       />
 
       <ServiceOverview
