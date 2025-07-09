@@ -27,8 +27,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className={styles.cardImage}
           priority // Consider adding priority if this card is above the fold
         />

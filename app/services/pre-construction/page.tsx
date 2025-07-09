@@ -81,7 +81,7 @@ export default function PreConstructionService() {
       <ServiceHero
         title="Pre-Construction"
         description="Plan with precision. Our Pre-Construction services lay the foundation for successful MEP projects by integrating technical expertise with strategic planning and cost control."
-        imageSrc="/assets/images/preConstructionService.jpg"
+        imageSrc="/assets/images/preConstructionService.png"
       />
       <ServiceOverview
         overviewTitle="Service Overview" // Can be changed

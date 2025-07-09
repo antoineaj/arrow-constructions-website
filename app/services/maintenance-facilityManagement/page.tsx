@@ -79,7 +79,7 @@ export default function MaintenanceFacilityManagementService() {
       <ServiceHero
         title="Maintenance & Facility Management"
         description="Proactive maintenance strategies and reliable service support to keep your MEP systems running at peak performance — minimizing downtime and maximizing longevity."
-        imageSrc="/assets/images/maintenanceFacilityManagementService.webp"
+        imageSrc="/assets/images/maintenanceFacilityManagementService.png"
       />
 
       <ServiceOverview

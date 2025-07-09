@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "googleapis": "^150.0.1",
     "next": "latest",
     "react": "latest",
     "react-countup": "^6.5.3",

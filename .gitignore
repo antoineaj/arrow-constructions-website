@@ -9,6 +9,9 @@ dist/
 build/
 out/
 
+# Google Service Account keys
+google-service-account.json
+
 # Environment files
 .env
 .env.local
