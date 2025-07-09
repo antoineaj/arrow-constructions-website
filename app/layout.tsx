@@ -1,5 +1,7 @@
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
+import { CookieProvider } from "../components/common/CookieContext";
+import CookieConsent from "../components/common/CookieConsent";
 import "./globals.scss";
 import { DM_Sans } from "next/font/google";
 
@@ -39,11 +41,19 @@ export default function RootLayout({
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        {/* Privacy and security meta tags */}
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       </head>
       <body className={dmSans.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <CookieProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <CookieConsent />
+        </CookieProvider>
       </body>
     </html>
   );

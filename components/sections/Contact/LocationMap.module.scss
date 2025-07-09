@@ -72,3 +72,87 @@
     border-radius: 12px;
   }
 }
+
+.mapPlaceholder {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px dashed #cbd5e1;
+
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+}
+
+.placeholderContent {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+}
+
+.locationIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.placeholderTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.placeholderText {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.addressInfo {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.975rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.loadMapButton {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
