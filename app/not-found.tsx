@@ -1,6 +1,11 @@
 import Link from "next/link";
 import styles from "./not-found.module.scss";
 
+export const metadata = {
+  title: "404 - Page Not Found | Arrow Constructions",
+  description: "The page you're looking for could not be found.",
+};
+
 export default function NotFound() {
   return (
     <div className={styles.notFoundContainer}>

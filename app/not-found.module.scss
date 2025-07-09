@@ -26,16 +26,19 @@
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  /* Remove backdrop-filter to prevent Critters build issues */
+  /* backdrop-filter: blur(10px); */
 }
 
 .errorCode {
   font-size: 8rem;
   font-weight: 800;
   background: linear-gradient(135deg, $color-primary-start, $color-primary-end);
-  background-clip: text;
+  /* Gradient text properties - wrapped for build compatibility */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-webkit browsers */
   line-height: 1;
   margin-bottom: 1rem;
   animation: pulse 2s ease-in-out infinite alternate;
