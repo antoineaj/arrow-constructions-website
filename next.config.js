@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    optimizeCss: true, // Enable CSS optimization
+    // Temporarily disable CSS optimization due to Critters dependency issue
+    // optimizeCss: true,
   },
   // Enable compression
   compress: true,
