@@ -1,0 +1,146 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 9999;
+  padding: 1rem 0;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.text {
+  flex: 1;
+  color: white;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+  color: #e5e5e5;
+}
+
+.privacyLink {
+  color: #0066cc;
+  text-decoration: underline;
+
+  &:hover {
+    color: #0052a3;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.buttonPrimary {
+  background: #0066cc;
+  color: white;
+
+  &:hover {
+    background: #0052a3;
+  }
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: #e5e5e5;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.buttonTertiary {
+  background: transparent;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+
+  &:hover {
+    background: rgba(0, 102, 204, 0.1);
+  }
+}
+
+// Ensure banner is above everything
+.cookieBanner {
+  z-index: 10000;
+}
