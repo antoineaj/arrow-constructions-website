@@ -28,7 +28,6 @@ export default function NotFound() {
           </p>
         </div>
       </div>
-      <div className={styles.background}></div>
     </div>
   );
 }
