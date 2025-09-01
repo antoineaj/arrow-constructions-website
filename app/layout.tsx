@@ -4,6 +4,7 @@ import { CookieProvider } from "../components/common/CookieContext";
 import CookieConsent from "../components/common/CookieConsent";
 import "./globals.scss";
 import { DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -50,7 +51,10 @@ export default function RootLayout({
       <body className={dmSans.className}>
         <CookieProvider>
           <Header />
-          <main>{children}</main>
+          <main>
+            {children}
+            <Analytics />
+          </main>
           <Footer />
           <CookieConsent />
         </CookieProvider>
