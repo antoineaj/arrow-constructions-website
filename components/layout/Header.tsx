@@ -114,6 +114,12 @@ export default function Header() {
             About Us
           </Link>
           <Link
+            href="/careers"
+            className={isActive("/careers") ? styles.active : ""}
+          >
+            Careers
+          </Link>
+          <Link
             href="/contact"
             className={isActive("/contact") ? styles.active : ""}
           >
@@ -213,6 +219,15 @@ export default function Header() {
               onClick={closeMobileMenu}
             >
               About Us
+            </Link>
+            <Link
+              href="/careers"
+              className={`${styles.mobileNavItem} ${
+                isActive("/careers") ? styles.mobileNavItemActive : ""
+              }`}
+              onClick={closeMobileMenu}
+            >
+              Careers
             </Link>
             <Link
               href="/contact"
