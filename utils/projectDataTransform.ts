@@ -52,6 +52,16 @@ const projectSpecificImages: Record<string, string> = {
   "Zaarour Club Ski Station":
     "/assets/images/featured/zaarourclubskistation.png",
   Converse: "/assets/images/featured/converse.png",
+  "N-House": "/assets/images/featured/nhouse.jpg",
+  "Armenian Catholicossate Phase 1 & 2": "/assets/images/featured/armenian.jpg",
+  "Insula 13th & 14th Floor": "/assets/images/featured/insula.jpg",
+  Ericsson: "/assets/images/featured/ericsson.jpg",
+  "SGBL Bank": "/assets/images/featured/sgblhamra.jpg",
+  "Depeche Mode": "/assets/images/featured/depechemode.jpg",
+  "Le Grand Chalet": "/assets/images/featured/legrandchalet.jpg",
+  "Les Dome De Surcosk 10th & 11th Floor":
+    "/assets/images/featured/lesdomes.jpg",
+  "Ilayya Restaurant": "/assets/images/featured/ilayya.jpg",
 
   // Add more project-specific images here as needed
   // "Your Project Name": "/assets/images/projects/your-project.png",
