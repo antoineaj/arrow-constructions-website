@@ -61,6 +61,7 @@ const projectSpecificImages: Record<string, string> = {
   "Le Grand Chalet": "/assets/images/featured/legrandchalet.jpg",
   "Les Dome De Surcosk 10th & 11th Floor":
     "/assets/images/featured/lesdomes.jpg",
+  "Ilayya Restaurant": "/assets/images/featured/ilayya.jpg",
 
   // Add more project-specific images here as needed
   // "Your Project Name": "/assets/images/projects/your-project.png",

@@ -34,10 +34,11 @@ const FEATURED_PROJECTS_CONFIG = {
     "Zaarour Club Lake",
     "Zaarour Club Ski Station",
     "Converse",
+    "Ilayya Restaurant",
   ],
 
   // Maximum number of featured projects to show
-  maxFeatured: 10,
+  maxFeatured: 11,
 
   // Whether to prioritize ongoing projects
   prioritizeOngoing: true,
