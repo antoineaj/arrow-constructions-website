@@ -46,8 +46,9 @@ export async function GET() {
 
     // Define the range where your project data is located
     // Default range assumes headers in row 1, data starts from row 2
-    // Expected columns: Project Name, Location, Type, Date Completed
-    const RANGE = process.env.GOOGLE_SHEETS_RANGE || "Sheet1!A2:D";
+    // Expected columns: Project Name, Location, Type, Approx Value (USD),
+    // Consultant, Date Completed
+    const RANGE = process.env.GOOGLE_SHEETS_RANGE || "Projects!A2:F";
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
@@ -62,13 +63,13 @@ export async function GET() {
 
     // Transform the raw data into the expected format
     const projects: Project[] = rows
-      .filter((row) => row.length >= 4 && row[0]) // Filter out empty rows
+      .filter((row) => row[0]) // Filter out empty rows (Sheets omits trailing empty cells)
       .map((row, index) => ({
         id: (index + 1).toString(),
         name: row[0]?.toString().trim() || "",
         location: row[1]?.toString().trim() || "",
         type: row[2]?.toString().trim() || "",
-        dateCompleted: row[3]?.toString().trim() || "",
+        dateCompleted: row[5]?.toString().trim() || "",
       }));
 
     return NextResponse.json({ projects });

@@ -122,10 +122,11 @@ export function transformGoogleSheetsData(
       "Miscellaneous";
 
     // Check if project is ongoing
+    const dateText = sheetsProject.dateCompleted.toLowerCase();
     const isOngoing =
-      sheetsProject.dateCompleted.toLowerCase().includes("ongoing") ||
-      sheetsProject.dateCompleted.toLowerCase().includes("in progress") ||
-      sheetsProject.dateCompleted.toLowerCase().includes("current");
+      dateText.replace(/\s+/g, "").includes("ongoing") || // "Ongoing", "On Going"
+      dateText.includes("in progress") ||
+      dateText.includes("current");
 
     return {
       id: sheetsProject.id,
